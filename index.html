@@ -1,8 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,7 +12,6 @@
     <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
 
     <style>
-
         /* ================================
            RESET
         ================================= */
@@ -35,49 +34,36 @@
             min-height: 100vh;
         }
 
-
         /* ================================
            ANIMATED GIF BACKGROUND
         ================================= */
 
         #gif-background {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 100%;
-
             object-fit: cover;
             object-position: center;
-
             z-index: -10;
-
             pointer-events: none;
         }
 
-
         .background-overlay {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 100%;
-
             background:
                 linear-gradient(
                     rgba(0, 0, 0, 0.55),
                     rgba(0, 0, 0, 0.70)
                 );
-
             z-index: -9;
-
             pointer-events: none;
         }
-
 
         /* ================================
            GENERAL
@@ -93,74 +79,54 @@
             margin: auto;
         }
 
-
         /* ================================
            NAVIGATION
         ================================= */
 
         nav {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 70px;
-
             z-index: 1000;
-
             background: rgba(0, 0, 0, 0.45);
-
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .nav-container {
             width: min(1150px, 92%);
-
             height: 100%;
-
             margin: auto;
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
         }
 
         .brand {
             font-size: 17px;
-
             font-weight: 800;
-
             letter-spacing: 2px;
         }
 
         .nav-links {
             display: flex;
-
             gap: 25px;
+            align-items: center;
         }
 
         .nav-links a {
-            color:
-                rgba(255, 255, 255, 0.75);
-
+            color: rgba(255, 255, 255, 0.75);
             font-size: 14px;
-
             transition: 0.25s;
         }
 
         .nav-links a:hover {
             color: white;
-
             transform: translateY(-2px);
         }
-
 
         /* ================================
            HERO
@@ -168,94 +134,58 @@
 
         header {
             min-height: 100vh;
-
             display: flex;
-
             align-items: center;
-
             padding-top: 70px;
         }
 
         .hero-grid {
             display: grid;
-
-            grid-template-columns:
-                1.3fr 0.7fr;
-
+            grid-template-columns: 1.3fr 0.7fr;
             gap: 70px;
-
             align-items: center;
         }
 
         .eyebrow {
             display: inline-block;
-
             padding: 7px 14px;
-
             margin-bottom: 22px;
-
             border-radius: 999px;
-
-            background:
-                rgba(255, 255, 255, 0.12);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.20);
-
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.20);
             backdrop-filter: blur(10px);
-
             font-size: 12px;
-
             font-weight: 700;
-
             letter-spacing: 1px;
         }
 
         h1 {
-            font-size:
-                clamp(48px, 8vw, 90px);
-
+            font-size: clamp(48px, 8vw, 90px);
             line-height: 0.98;
-
             letter-spacing: -3px;
-
             margin-bottom: 25px;
-
-            text-shadow:
-                0 8px 30px rgba(0, 0, 0, 0.55);
+            text-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
         }
 
         .hero-text {
             max-width: 650px;
-
-            color:
-                rgba(255, 255, 255, 0.82);
-
+            color: rgba(255, 255, 255, 0.82);
             font-size: 18px;
         }
 
         .buttons {
             display: flex;
-
             gap: 12px;
-
             margin-top: 30px;
-
             flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-
             padding: 13px 20px;
-
             border-radius: 11px;
-
             font-weight: 700;
-
-            border:
-                1px solid rgba(255, 255, 255, 0.25);
-
+            border: 1px solid rgba(255, 255, 255, 0.25);
             transition: 0.25s;
         }
 
@@ -265,85 +195,55 @@
 
         .btn-primary {
             background: white;
-
             color: #111;
-
             border-color: white;
         }
 
         .btn-secondary {
-            background:
-                rgba(255, 255, 255, 0.08);
-
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
         }
-
 
         /* ================================
            PROFILE CARD
         ================================= */
 
         .profile-card {
-            background:
-                rgba(255, 255, 255, 0.10);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.22);
-
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.32);
-
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.32);
             border-radius: 25px;
-
             padding: 32px;
-
             text-align: center;
         }
 
         .profile-image {
             width: 155px;
             height: 155px;
-
             margin: 0 auto 20px;
-
             border-radius: 50%;
-
-            background:
-                rgba(255, 255, 255, 0.13);
-
-            border:
-                4px solid rgba(255, 255, 255, 0.35);
-
+            background: rgba(255, 255, 255, 0.13);
+            border: 4px solid rgba(255, 255, 255, 0.35);
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             overflow: hidden;
-
             font-size: 12px;
-
             font-weight: 800;
-
             letter-spacing: 1px;
         }
 
         .profile-image img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
         }
 
         .profile-card p {
-            color:
-                rgba(255, 255, 255, 0.70);
+            color: rgba(255, 255, 255, 0.70);
         }
-
 
         /* ================================
            SECTIONS
@@ -351,9 +251,7 @@
 
         section {
             padding: 100px 0;
-
-            background:
-                rgba(0, 0, 0, 0.18);
+            background: rgba(0, 0, 0, 0.18);
         }
 
         .section-heading {
@@ -362,17 +260,13 @@
 
         .section-heading h2 {
             font-size: 38px;
-
             margin-bottom: 7px;
         }
 
         .section-heading p {
-            color:
-                rgba(255, 255, 255, 0.70);
-
+            color: rgba(255, 255, 255, 0.70);
             margin-bottom: 20px;
         }
-
 
         /* ================================
            ABOUT
@@ -380,30 +274,17 @@
 
         .about-grid {
             display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
+            grid-template-columns: 1fr 1fr;
             gap: 24px;
         }
 
         .panel {
-            background:
-                rgba(255, 255, 255, 0.10);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.22);
-
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             backdrop-filter: blur(14px);
-
-            -webkit-backdrop-filter:
-                blur(14px);
-
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.25);
-
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             border-radius: 20px;
-
             padding: 30px;
         }
 
@@ -412,12 +293,9 @@
         }
 
         .panel p {
-            color:
-                rgba(255, 255, 255, 0.72);
-
+            color: rgba(255, 255, 255, 0.72);
             margin-bottom: 18px;
         }
-
 
         /* ================================
            ABOUT GIF
@@ -426,23 +304,14 @@
         .about-gif {
             width: 180px;
             height: 180px;
-
             object-fit: cover;
-
             border-radius: 15px;
-
             margin-top: 20px;
             margin-bottom: 20px;
-
             display: block;
-
-            border:
-                1px solid rgba(255, 255, 255, 0.2);
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
-
 
         /* ================================
            PROJECTS
@@ -450,68 +319,37 @@
 
         .projects-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .project-card {
-            background:
-                rgba(255, 255, 255, 0.10);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.22);
-
-            backdrop-filter:
-                blur(14px);
-
-            -webkit-backdrop-filter:
-                blur(14px);
-
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.25);
-
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             border-radius: 20px;
-
             padding: 25px;
-
-            transition:
-                0.25s ease;
+            transition: 0.25s ease;
         }
 
         .project-card:hover {
-            transform:
-                translateY(-7px);
-
-            background:
-                rgba(255, 255, 255, 0.15);
-
-            box-shadow:
-                0 18px 45px rgba(0, 0, 0, 0.38);
+            transform: translateY(-7px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
         }
 
         .project-number {
             width: 41px;
             height: 41px;
-
             border-radius: 11px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
-            background:
-                rgba(255, 255, 255, 0.14);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.18);
-
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             font-weight: 800;
-
             margin-bottom: 18px;
         }
 
@@ -520,19 +358,14 @@
         }
 
         .project-card p {
-            color:
-                rgba(255, 255, 255, 0.70);
-
+            color: rgba(255, 255, 255, 0.70);
             font-size: 15px;
         }
 
         .project-link {
             display: inline-block;
-
             margin-top: 18px;
-
             font-weight: 700;
-
             color: white;
         }
 
@@ -540,114 +373,72 @@
             text-decoration: underline;
         }
 
-
         /* ================================
            REFLECTION
         ================================= */
 
         .reflection-box {
-            background:
-                rgba(0, 0, 0, 0.48);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.18);
-
-            backdrop-filter:
-                blur(15px);
-
-            -webkit-backdrop-filter:
-                blur(15px);
-
+            background: rgba(0, 0, 0, 0.48);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-radius: 25px;
-
             padding: 45px;
         }
 
         .reflection-box h2 {
             font-size: 34px;
-
             margin-bottom: 12px;
         }
 
         .reflection-box p {
             max-width: 820px;
-
-            color:
-                rgba(255, 255, 255, 0.72);
-
+            color: rgba(255, 255, 255, 0.72);
             margin-bottom: 10px;
         }
 
         .reflection-gif {
             width: 300px;
             height: 200px;
-
             object-fit: cover;
-
             border-radius: 15px;
-
             margin-top: 25px;
-
             display: block;
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
         }
-
 
         /* ================================
            RESEARCH
         ================================= */
 
         .research-box {
-            background:
-                rgba(255, 255, 255, 0.10);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.22);
-
-            backdrop-filter:
-                blur(14px);
-
-            -webkit-backdrop-filter:
-                blur(14px);
-
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             border-radius: 25px;
-
             padding: 45px;
-
             text-align: center;
-
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.30);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
         }
 
         .research-box h2 {
             font-size: 38px;
-
             margin-bottom: 10px;
         }
 
         .research-box p {
-            color:
-                rgba(255, 255, 255, 0.72);
-
+            color: rgba(255, 255, 255, 0.72);
             margin-bottom: 25px;
         }
 
         .research-button {
             display: inline-block;
-
             padding: 14px 25px;
-
             background: white;
-
             color: #111;
-
             border-radius: 12px;
-
             font-weight: 700;
-
             transition: 0.25s;
         }
 
@@ -655,100 +446,71 @@
             transform: translateY(-4px);
         }
 
-
         /* ================================
            PINTEREST GIF
         ================================= */
 
-   .tomato-gif {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
+        .tomato-gif {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
 
-.tomato-gif img {
-    width: 1000px;
-    max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
+        .tomato-gif img {
+            width: 1000px;
+            max-width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
         /* ================================
            SCHOOL CARDS
         ================================= */
 
         .school-heading {
             text-align: center;
-
             margin-top: 90px;
-
             margin-bottom: 35px;
         }
 
         .school-heading h2 {
             font-size: 38px;
-
             margin-bottom: 8px;
         }
 
         .school-heading p {
-            color:
-                rgba(255, 255, 255, 0.70);
+            color: rgba(255, 255, 255, 0.70);
         }
 
         .school-links {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .school-card {
             display: block;
-
             overflow: hidden;
-
             border-radius: 22px;
-
-            background:
-                rgba(255, 255, 255, 0.10);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.22);
-
-            backdrop-filter:
-                blur(14px);
-
-            -webkit-backdrop-filter:
-                blur(14px);
-
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.30);
-
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
             transition: 0.3s;
         }
 
         .school-card:hover {
-            transform:
-                translateY(-8px);
-
-            background:
-                rgba(255, 255, 255, 0.16);
-
-            box-shadow:
-                0 20px 50px rgba(0, 0, 0, 0.45);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.16);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
         }
 
         .school-card img {
             width: 100%;
-
             height: 280px;
-
             object-fit: cover;
-
             display: block;
-
             transition: 0.3s;
         }
 
@@ -758,23 +520,18 @@
 
         .school-info {
             padding: 20px;
-
             text-align: center;
         }
 
         .school-info h3 {
             font-size: 21px;
-
             margin-bottom: 5px;
         }
 
         .school-info p {
-            color:
-                rgba(255, 255, 255, 0.65);
-
+            color: rgba(255, 255, 255, 0.65);
             font-size: 14px;
         }
-
 
         /* ================================
            FOOTER
@@ -782,21 +539,12 @@
 
         footer {
             padding: 32px 0;
-
             text-align: center;
-
-            background:
-                rgba(0, 0, 0, 0.58);
-
-            border-top:
-                1px solid rgba(255, 255, 255, 0.14);
-
-            color:
-                rgba(255, 255, 255, 0.58);
-
+            background: rgba(0, 0, 0, 0.58);
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            color: rgba(255, 255, 255, 0.58);
             font-size: 14px;
         }
-
 
         /* ================================
            TABLET
@@ -813,21 +561,17 @@
             }
 
             .projects-grid {
-                grid-template-columns:
-                    1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .school-links {
-                grid-template-columns:
-                    1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .nav-links {
                 gap: 15px;
             }
-
         }
-
 
         /* ================================
            MOBILE
@@ -857,7 +601,6 @@
 
             .research-box {
                 padding: 30px 20px;
-           
             }
 
             .reflection-gif {
@@ -872,16 +615,11 @@
             h1 {
                 letter-spacing: -2px;
             }
-
         }
-
     </style>
-
 </head>
 
-
 <body>
-
 
     <!-- ==================================================
          ANIMATED TENOR GIF BACKGROUND
@@ -895,53 +633,41 @@
 
     <div class="background-overlay"></div>
 
-
-
     <!-- ==================================================
          NAVIGATION
     ================================================== -->
 
     <nav>
-
         <div class="nav-container">
 
-            <a
-                href="#home"
-                class="brand"
-            >
+            <a href="#home" class="brand">
                 MY PORTFOLIO
             </a>
 
-
             <div class="nav-links">
 
-                <a href="#about">
-                    About
-                </a>
+                <a href="#about">About</a>
 
-                <a href="#projects">
-                    Projects
-                </a>
+                <a href="#projects">Projects</a>
 
-                <a href="#reflection">
-                    Reflection
-                </a>
+                <a href="#reflection">Reflection</a>
 
-                <a href="#research">
-                    Research
-                </a>
+                <a href="#research">Research</a>
 
-                <a href="#schools">
-                    Schools
+                <a href="#schools">Schools</a>
+
+                <!-- DIGITAL PORTFOLIO 2 -->
+                <a
+                    href="https://canva.link/j93t49s5iyp1g1h"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Digital Portfolio 2
                 </a>
 
             </div>
-
         </div>
-
     </nav>
-
-
 
     <!-- ==================================================
          HOME
@@ -953,20 +679,17 @@
 
             <div class="hero-grid">
 
-
                 <div>
 
                     <span class="eyebrow">
                         DIGITAL PORTFOLIO • 2026
                     </span>
 
-
                     <h1>
                         My Super Cool
                         <br>
                         Portfolio
                     </h1>
-
 
                     <p class="hero-text">
                         Welcome to my super cool digital portfolio.
@@ -976,7 +699,6 @@
                         and academic journey.
                     </p>
 
-
                     <div class="buttons">
 
                         <a
@@ -985,7 +707,6 @@
                         >
                             Explore Projects
                         </a>
-
 
                         <a
                             href="#about"
@@ -998,25 +719,22 @@
 
                 </div>
 
-
-
                 <!-- PROFILE -->
 
                 <div class="profile-card">
 
                     <div class="profile-image">
 
-                       
-                       <img src="./aaaa.jpg" alt="Hans Gabrielle G. Ambos">
+                        <img
+                            src="./aaaa.jpg"
+                            alt="Hans Gabrielle G. Ambos"
                         >
 
                     </div>
 
-
                     <h2>
                         Hans Gabrielle G Ambos
                     </h2>
-
 
                     <p>
                         Grade 12 Diligence • Cebu Institute of Technology University
@@ -1024,14 +742,9 @@
 
                 </div>
 
-
             </div>
-
         </div>
-
     </header>
-
-
 
     <!-- ==================================================
          ABOUT
@@ -1040,7 +753,6 @@
     <section id="about">
 
         <div class="container">
-
 
             <div class="section-heading">
 
@@ -1054,7 +766,6 @@
                     that's why I made this cool little webpage using HTML.
                 </p>
 
-
                 <img
                     src="https://media1.tenor.com/m/mxk6DtEPqZ0AAAAd/le-sserafim-spaghetti.gif"
                     alt="LE SSERAFIM GIF"
@@ -1063,10 +774,7 @@
 
             </div>
 
-
-
             <div class="about-grid">
-
 
                 <!-- PROFILE -->
 
@@ -1076,12 +784,10 @@
                         Profile
                     </h3>
 
-
                     <p>
                         What is up, everyone! My name is Hans Gabrielle G. Ambos from 12-Diligence.
                         I’m 5'10" tall and ready to mingle—just kidding!
                     </p>
-
 
                     <p>
                         As you can see, this is my very awesome and very cool digital portfolio,
@@ -1090,19 +796,16 @@
                         (Honorable Mention: Kqwyxz Elvira).
                     </p>
 
-
                     <p>
                         I absolutely love math and science, as well as English, so I guess you could
                         say I’m a nerd of some sort. I enjoy listening to jazz and indie pop, and I
                         listen to them almost every day, almost every hour—LMAO.
                     </p>
 
-
                     <p>
                         I write poems and novels, and I’m also a gamer who enjoys playing games like
                         Mobile Legends: Bang Bang and VALORANT.
                     </p>
-
 
                     <p>
                         Lastly, I’m quite interested in politics and take it seriously because,
@@ -1113,8 +816,6 @@
 
                 </div>
 
-
-
                 <!-- GOALS -->
 
                 <div class="panel">
@@ -1123,14 +824,12 @@
                         My Goals
                     </h3>
 
-
                     <p>
                         I am currently in 12-Diligence, a pilot section. I honestly have no idea how
                         I ended up in a pilot section, but here I am. I do pretty well with my
                         grades, although I can't seem to reach With Honors because I always have
                         that one grade below 87. (Sigh.)
                     </p>
-
 
                     <p>
                         I am currently in STEM because I am planning to study I.T. (Help me.)
@@ -1139,7 +838,6 @@
                         computers—how they work, how they function, and basically everything
                         about them. So naturally, my interest in pursuing I.T. came from that.
                     </p>
-
 
                     <p>
                         I am also interested in astronomy and biology. I find it fascinating to
@@ -1150,14 +848,9 @@
 
                 </div>
 
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- ==================================================
          PROJECTS
@@ -1166,7 +859,6 @@
     <section id="projects">
 
         <div class="container">
-
 
             <div class="section-heading">
 
@@ -1180,10 +872,7 @@
 
             </div>
 
-
-
             <div class="projects-grid">
-
 
                 <!-- PROJECT 01 -->
 
@@ -1193,16 +882,13 @@
                         01
                     </div>
 
-
                     <h3>
                         Units, Physical Quantities, and Measurement using different measuring devices.
                     </h3>
 
-
                     <p>
                         Made in Canva
                     </p>
-
 
                     <a
                         href="https://www.canva.com/design/DAHTkBvxaxE/YT-EpVLAN3gQGwQi_ss7Gw/edit"
@@ -1215,8 +901,6 @@
 
                 </article>
 
-
-
                 <!-- PROJECT 02 -->
 
                 <article class="project-card">
@@ -1225,28 +909,19 @@
                         02
                     </div>
 
-
                     <h3>
-                        Project Title
+                        Typhoon Disaster Relief Drone Supply Run (DMW / OCD Dispatch)
                     </h3>
 
-
                     <p>
-                        Short description of your project
-                        or activity.
+                        Made in Canva
                     </p>
 
-
-                    <a
-                        href="#"
-                        class="project-link"
-                    >
+                    <a href="https://canva.link/j93t49s5iyp1g1h" class="project-link">
                         View Project →
                     </a>
 
                 </article>
-
-
 
                 <!-- PROJECT 03 -->
 
@@ -1256,28 +931,20 @@
                         03
                     </div>
 
-
                     <h3>
                         Project Title
                     </h3>
-
 
                     <p>
                         Short description of your project
                         or activity.
                     </p>
 
-
-                    <a
-                        href="#"
-                        class="project-link"
-                    >
+                    <a href="#" class="project-link">
                         View Project →
                     </a>
 
                 </article>
-
-
 
                 <!-- PROJECT 04 -->
 
@@ -1287,28 +954,20 @@
                         04
                     </div>
 
-
                     <h3>
                         Project Title
                     </h3>
-
 
                     <p>
                         Short description of your project
                         or activity.
                     </p>
 
-
-                    <a
-                        href="#"
-                        class="project-link"
-                    >
+                    <a href="#" class="project-link">
                         View Project →
                     </a>
 
                 </article>
-
-
 
                 <!-- PROJECT 05 -->
 
@@ -1318,28 +977,20 @@
                         05
                     </div>
 
-
                     <h3>
                         Project Title
                     </h3>
-
 
                     <p>
                         Short description of your project
                         or activity.
                     </p>
 
-
-                    <a
-                        href="#"
-                        class="project-link"
-                    >
+                    <a href="#" class="project-link">
                         View Project →
                     </a>
 
                 </article>
-
-
 
                 <!-- PROJECT 06 -->
 
@@ -1349,35 +1000,24 @@
                         06
                     </div>
 
-
                     <h3>
                         Project Title
                     </h3>
-
 
                     <p>
                         Short description of your project
                         or activity.
                     </p>
 
-
-                    <a
-                        href="#"
-                        class="project-link"
-                    >
+                    <a href="#" class="project-link">
                         View Project →
                     </a>
 
                 </article>
 
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- ==================================================
          REFLECTION
@@ -1393,11 +1033,9 @@
                     Reflection
                 </h2>
 
-
                 <p>
                     TO BE UPDATED UNDER CONSTRUCTION.
                 </p>
-
 
                 <img
                     src="https://i.redd.it/q0dd3k02unqb1.gif"
@@ -1411,8 +1049,6 @@
 
     </section>
 
-
-
     <!-- ==================================================
          RESEARCH
     ================================================== -->
@@ -1421,19 +1057,16 @@
 
         <div class="container">
 
-
             <div class="research-box">
 
                 <h2>
                     My Research
                 </h2>
 
-
                 <p>
                     Here you can find my research papers,
                     documents, and other research-related materials.
                 </p>
-
 
                 <a
                     href="https://drive.google.com/drive/folders/1MyJkJeajl7DK3qLF4OS_jfM1oVqErOdy?usp=drive_link"
@@ -1446,19 +1079,18 @@
 
             </div>
 
-
-
             <!-- ==================================================
                  LARGE CLICKABLE PINTEREST GIF
             ================================================== -->
 
-  <div class="tomato-gif">
-    <img
-        src="https://i.pinimg.com/originals/02/39/44/02394419ff4cb21376285ce588e03b2c.gif"
-        alt="Tomato GIF"
-    >
-</div>
+            <div class="tomato-gif">
 
+                <img
+                    src="https://i.pinimg.com/originals/02/39/44/02394419ff4cb21376285ce588e03b2c.gif"
+                    alt="Tomato GIF"
+                >
+
+            </div>
 
             <!-- ==================================================
                  SCHOOL SECTION
@@ -1473,17 +1105,13 @@
                     My Schools
                 </h2>
 
-
                 <p>
                     A look back at the schools that have been part of my journey.
                 </p>
 
             </div>
 
-
-
             <div class="school-links">
-
 
                 <!-- ==================================================
                      ELEMENTARY SCHOOL
@@ -1497,17 +1125,15 @@
                 >
 
                     <img
-                        src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/305395374_502020341933455_7404339986283965417_n.jpg?stp=dst-jpg_tt6&cstp=mx942x960&ctp=s942x960&_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFajd2MIX5WAMwPqE9GQWcBSzHnOAB_9n9LMec4AH_2f93k2zxLvYyx-JusfheT4Tidtw41ECuM3U21I6423Xhv&_nc_ohc=8jk81E_4kJ0Q7kNvwGUIp2M&_nc_oc=Adp0f8DZbmsNtAshGCHmavFprNyK5pMmfNgHyGczJa253F5qEsgadcKKbmMRR-w71gc&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=_UflsxwgX40s66GktTY3aw&_nc_ss=7b2a8&oh=00_AQGoVC6xcUeBrbImNcaFGJ3RwKebe-33X82Q83MKuMDSOA&oe=6A9788E6"
+                        src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/305395374_502020341933455_7404339986283965417_n.jpg?stp=dst-jpg_tt6&cstp=mx942x960&ctp=s942x960&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFajd2MIX5WAMwPqE9GQWcBSzHnOAB_9n9LMec4AH_2f93k2zxLvYyx-JusfheT4Tidtw41ECuM3U21I6423Xhv&_nc_ohc=wepzeQzMUUkQ7kNvwFl0sIr&_nc_oc=AdrCv-zqPa7DZhuJoUE5nQAA-vLUvyqy7iEEK-17cDss-dWNhEn5LxJBVHKNTC_Q-wQ&_nc_zt=23&_nc_ht=scontent.fceb6-4.fna&_nc_gid=EtAU5A7NgGSpP8B1je1ocQ&_nc_ss=7b2a8&oh=00_AQLG3VF3ZSCZTJCpRfHZnY79o7XkJs9rT3asISUL_JlMhg&oe=6ABC72E6"
                         alt="Labangon Elementary School"
                     >
-
 
                     <div class="school-info">
 
                         <h3>
                             Elementary School
                         </h3>
-
 
                         <p>
                             Labangon Elementary School
@@ -1516,8 +1142,6 @@
                     </div>
 
                 </a>
-
-
 
                 <!-- ==================================================
                      JUNIOR HIGH SCHOOL
@@ -1531,17 +1155,15 @@
                 >
 
                     <img
-                        src="https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-6/311519710_224591373226115_4224349266479429661_n.jpg?stp=dst-jpg_tt6&cstp=mx455x461&ctp=s455x461&_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEs3ZxR1JL0hMyY4eUDxPvfGNv9AZKiOM8Y2_0BkqI4zzzKrTZXNNa2qWsFErW4NefBP01u7QE9ak863X0TxaOG&_nc_ohc=RbN3r4p9SwYQ7kNvwHNfYd9&_nc_oc=AdohAgo0UACgM6XPWINJRYraxPJ1q2SrXYSyxnlqAWd34UzM6vGX1CB5_lZHlpPOOKQ&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&_nc_gid=fgHSi3-TaJGTwHQlM5O00Q&_nc_ss=7b2a8&oh=00_AQEzBFjDBAV1lztXejka7MaoZ38dqcRS714zoCt8xOlFeA&oe=6A976D4A"
+                        src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/311519710_224591373226115_4224349266479429661_n.jpg?stp=dst-jpg_tt6&cstp=mx455x461&ctp=s455x461&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEs3ZxR1JL0hMyY4eUDxPvfGNv9AZKiOM8Y2_0BkqI4zzzKrTZXNNa2qWsFErW4NefBP01u7QE9ak863X0TxaOG&_nc_ohc=6ec6BreyXWYQ7kNvwGfCt7I&_nc_oc=AdoIH5hi6cUHYlicV9EbU_TgS7gGNMsKtlmf0QuVGzEOq26GH4FpTVb3wdfG1kydYrQ&_nc_zt=23&_nc_ht=scontent.fceb6-4.fna&_nc_gid=qMz7fC8JM-rTTKFjHXom2Q&_nc_ss=7b2a8&oh=00_AQLwCttXXIxtCMMq-MOQ8undnEp2xxmhaRdU2MFIyj3PwQ&oe=6ABC574A"
                         alt="Junior High School"
                     >
-
 
                     <div class="school-info">
 
                         <h3>
                             Junior High School
                         </h3>
-
 
                         <p>
                             Abellana National High School
@@ -1550,8 +1172,6 @@
                     </div>
 
                 </a>
-
-
 
                 <!-- ==================================================
                      SENIOR HIGH SCHOOL
@@ -1565,17 +1185,15 @@
                 >
 
                     <img
-                        src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/327288066_912480999769374_7920011622822318730_n.png?stp=dst-png&cstp=mx2027x1978&ctp=s2027x1978&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGqZJhlnP-yf7Q1lwcIP8rzn72Cbwe0Mc2fvYJvB7QxzfNo8W4l7PsiEP9Q9hwkc2A1Dpq3yIR-REwDQUmWgS2S&_nc_ohc=70vzvCOJFG0Q7kNvwHUHkPX&_nc_oc=AdrgoZJt0GUkE0evwTHI-Udq3LUYNbt1VSJgXx7rxFu1TFuKbNtKlw0Jp_XSw-FMTfQ&_nc_zt=23&_nc_ht=scontent.fceb6-3.fna&_nc_gid=5ccslpaK-l_ES6l_o3pe5A&_nc_ss=7b2a8&oh=00_AQH7aGK-GH7w4X9g_Xdk08TLFYTowXTR42ermBJtqYUIYg&oe=6A9789C8"
+                        src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/327288066_912480999769374_7920011622822318730_n.png?stp=dst-png&cstp=mx2027x1978&ctp=s2027x1978&_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGqZJhlnP-yf7Q1lwcIP8rzn72Cbwe0Mc2fvYJvB7QxzfNo8W4l7PsiEP9Q9hwkc2A1Dpq3yIR-REwDQUmWgS2S&_nc_ohc=EARuf4fzmk8Q7kNvwGMJ2Q8&_nc_oc=AdpwCJpop9mXVsv6pxBTVqjJTVC53tI7H1vBce_KF3d9l62ysSmeoM8anYubnaxiASM&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=V_rt5EeXUxqEmuYS6CVM0Q&_nc_ss=7b2a8&oh=00_AQKPw-ObSNrsNX79ejFX_0GWhrAttbnRT-vh3-0tT5wFFw&oe=6ABC73C8"
                         alt="Cebu Institute of Technology University"
                     >
-
 
                     <div class="school-info">
 
                         <h3>
                             Senior High School
                         </h3>
-
 
                         <p>
                             Cebu Institute of Technology – University
@@ -1585,14 +1203,9 @@
 
                 </a>
 
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- ==================================================
          FOOTER
@@ -1608,7 +1221,7 @@
 
     </footer>
 
-
 </body>
 
 </html>
+```
